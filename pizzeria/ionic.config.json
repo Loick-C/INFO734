@@ -1,0 +1,7 @@
+{
+  "name": "pizzeria",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
