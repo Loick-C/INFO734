@@ -1,7 +1,7 @@
 function getAllPizzas(req, res) {
     const Pizza = require('../../api/models/modelsapp');
     Pizza.find({}, function(err, pizzas) {
-    if (err) throw err;
+    if (err) throw err; 
         res.json(pizzas);
     });
 }
@@ -58,7 +58,7 @@ function deleteAllPDJ(req, res) {
 }
 function deleteOnePizzaByTitle(req, res) {
     const Pizza = require('../../api/models/modelsapp');
-    Pizza.findOneAndDelete(
+    Pizza.findOneAndRemove(
         {title : req.body.title}, function(err, pizzas) {
         if (err) throw err;
             res.json({info : 'The pizza ' + req.body.title + ' has been deleted'});

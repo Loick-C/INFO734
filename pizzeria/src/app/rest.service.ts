@@ -44,4 +44,13 @@ export class RestService {
       catchError(this.handleError));
 
   }
+  getAllPizzas(): Observable<any> {
+
+    const apiUrl = "http://localhost:3000/api/shows";
+
+    return this.http.get(apiUrl, httpOptions).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+
+  }
 }

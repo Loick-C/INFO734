@@ -11,11 +11,26 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <div class="ion-padding">
-    Carte des pizzas clickable
+  <div class="ion-padding" >
+    Carte des pizzas
+    <div *ngFor="let cequejeveux of pizza">
+      <ion-card *ngIf="pizza" >
+          <ion-card-header >
+            <img src={{cequejeveux.url}}>
+            <ion-card-title> {{cequejeveux.title}} </ion-card-title>
+            <ion-card-subtitle> {{cequejeveux.prix}} </ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+           Ingrédient
+          
+          </ion-card-content>
+      </ion-card>
+      </div>
   </div>
-</ion-content>
+  </ion-content>
+    
 <ion-footer no-shadow>
   <ion-toolbar position="bottom">
     <ion-button expand="block" color="medium" href="/panier">Commander</ion-button>
