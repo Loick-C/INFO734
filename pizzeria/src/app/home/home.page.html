@@ -13,19 +13,19 @@
 <ion-content>
   <div class="ion-padding">
 Bienvenue sur la page de garde de la pizzeria
-
+<div *ngFor="let cequejeveux of platdujour">
 <ion-card *ngIf="platdujour">
     <ion-card-header >
-      <img src="">
-      <ion-card-title> {{platdujour.title}} </ion-card-title>
-      <ion-card-subtitle> {{platdujour.prix}} </ion-card-subtitle>
+      <img src={{cequejeveux.url}}>
+      <ion-card-title> {{cequejeveux.title}} </ion-card-title>
+      <ion-card-subtitle> {{cequejeveux.prix}} </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
      Ingrédient
-
+    
     </ion-card-content>
 </ion-card>
-
+</div>
   
   </div>
 </ion-content>

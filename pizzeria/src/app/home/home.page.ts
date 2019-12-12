@@ -23,7 +23,7 @@ export class HomePage {
     await this.api.getPDJ()
       .subscribe(res => {
         console.log(res[0]);
-        this.platdujour = res[0];
+        this.platdujour = res;
         loading.dismiss();
       }, err => {
         console.log(err);
